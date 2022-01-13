@@ -6,6 +6,8 @@ The intended use of this platform is to provide local and regional health offici
 
 Please note that I was not able to fully comply with coding best practices, including proper commenting and modularity, because in the wake of the COVID-19 pandemic, all these components had to be developed and regularly updated within very short timetables in order to satisfy constantly changing needs. Nevertheless, I tried to, to the best of my ability, keep the code readable, efficient, and maintainable.
 
+This repository is currently archived.
+
 ## Components
 
 This platform comprises three major components:
