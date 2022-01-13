@@ -1,0 +1,3 @@
+test,method,result_field,comments_field
+"scov2","rtpcr","result_rtpcr","result_comments_rtpcr"
+"scov2ag","agicg","result_agicg","result_comments_agicg"

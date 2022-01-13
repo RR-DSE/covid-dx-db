@@ -1,0 +1,921 @@
+/*
+- style.css (utf-8)
+- 
+- Edited by: RR-DSE
+- Timestamp: 22-01-12 20:12:14
+*/
+
+*
+{
+	text-decoration : none;
+	color : black;
+	vertical-align : center;
+	text-align : left;
+}
+
+BODY
+{
+	background-color : RGB(232, 232, 232);
+	margin : 0px;
+	padding-bottom : 5px;
+  margin-bottom : 50px;
+	width : auto;
+	min-width : 800px;
+}
+
+DIV.app-header
+{
+	width : 100%;
+	background-color : white;
+	padding : 5px 0px 5px 0px;
+	margin : 0px 0px 0px 0px;
+}
+
+TABLE.app-header
+{
+	table-layout : fixed;
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+	background-color : white;
+	border-collapse : collapse;
+}
+
+TABLE.app-header TD.header-logo
+{
+	padding : 0px 0px 0px 10px;
+	vertical-align : middle;
+	border-right : 1px solid black;
+}
+
+TABLE.app-header TD.header-logo IMG
+{
+	display: table-cell;
+}
+
+TABLE.app-header TD.header-title
+{
+	padding : 0px 0px 0px 30px;
+	color : black;
+	font : bold normal normal 20px "Calibri","Arial",sans-serif;
+}
+
+TABLE.app-header TD.header-user
+{
+	padding : 0px 30px 0px 30px;
+	color : RGB(100, 100, 100);
+	font : normal normal normal 16px "Calibri","Arial",sans-serif;
+	text-align : right;
+}
+
+DIV.app-header-nav
+{
+	width : 100%;
+	background-color : RGB(0, 162, 232);
+	margin : 0px 0px 0px 0px;
+	padding : 0px 0px 0px 0px;
+}
+
+TABLE.app-header-nav
+{
+	width : auto;
+	table-layout : auto;
+	padding : 0px;
+	margin : 0px 0px 0px 10px;
+	border-collapse : collapse;
+	background-color : RGB(200, 200, 200);
+}
+
+TABLE.app-header-nav TD
+{
+	width : auto;
+	text-align : center;
+	padding : 3px 10px 3px 10px;
+	background-color : RGB(0, 230, 230);
+	font : normal normal normal 17px "Calibri","Arial",sans-serif;
+	cursor : pointer;
+}
+
+TABLE.app-header-nav TD:hover
+{
+	font : normal normal normal 17px "Calibri","Arial",sans-serif;
+	background-color : RGB(0, 250, 250);
+}
+
+TABLE.app-header-nav TD.app-header-nav-border
+{
+	border-left : 1px solid rgb(250, 250, 250);
+}
+
+DIV.app-error
+{
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+}
+
+TABLE.app-error
+{
+	width : auto;
+	table-layout : auto;
+	margin : 10px 20px 0px 20px;
+	border-collapse : collapse;
+}
+
+TABLE.app-error TD.caption
+{
+	width : 90px;
+	color : RGB(255, 100, 100);	
+	font : normal normal normal 20px "Calibri","Arial",sans-serif;
+}
+
+TABLE.app-error TD.desc
+{
+	width : auto;
+	color : black;
+	font : normal normal normal 18px "Calibri","Arial",sans-serif;
+}
+
+DIV.app-debug
+{
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+}
+
+TABLE.app-debug
+{
+	width : auto;
+	table-layout : auto;
+	margin : 10px 20px 0px 20px;
+	border-collapse : collapse;
+}
+
+TABLE.app-debug TD.caption
+{
+	width : 70px;
+	color : RGB(255, 100, 100);	
+	font : normal normal normal 12px "Calibri","Arial",sans-serif;
+}
+
+TABLE.app-debug TD.method
+{
+	width : auto;
+	color : grey;
+  padding : 0px 12px 0px 0px;
+	font : normal normal normal 12px "Calibri","Arial",sans-serif;
+}
+
+TABLE.app-debug TD.desc
+{
+	width : auto;
+	color : black;
+	font : normal normal normal 12px "Calibri","Arial",sans-serif;
+}
+
+DIV.app-warning
+{
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+}
+
+TABLE.app-warning
+{
+	width : auto;
+	table-layout : auto;
+	margin : 10px 20px 0px 20px;
+	border-collapse : collapse;
+}
+
+TABLE.app-warning TD.caption
+{
+	width : 90px;
+	color : RGB(160, 160, 10);	
+	font : normal normal normal 20px "Calibri","Arial",sans-serif;
+}
+
+TABLE.app-warning TD.desc
+{
+	width : auto;
+	color : black;
+	font : normal normal normal 18px "Calibri","Arial",sans-serif;
+}
+
+DIV.app-info
+{
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+}
+
+TABLE.app-info
+{
+	width : auto;
+	table-layout : auto;
+	margin : 10px 20px 0px 20px;
+	border-collapse : collapse;
+}
+
+TABLE.app-info TD.caption
+{
+	width : 90px;
+	color : RGB(100, 100, 180);	
+	font : normal normal normal 20px "Calibri","Arial",sans-serif;
+}
+
+TABLE.app-info TD.desc
+{
+	width : auto;
+	color : black;
+	font : normal normal normal 18px "Calibri","Arial",sans-serif;
+}
+
+DIV.app-form
+{
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 10px 0px 0px 0px;
+}
+
+P.app-form-caption
+{
+	font : normal normal bold 20px "Calibri","Arial",sans-serif;
+	margin : 0px 0px 10px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+FORM.app-form
+{
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+}
+
+FORM.app-form-inline
+{
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+	display : inline;
+}
+
+TABLE.app-form
+{
+	table-layout : auto;
+	width : auto;
+	font : normal normal normal 20px "Calibri","Arial",sans-serif;
+	border-collapse : collapse;
+	margin : 0px 10px 0px 20px;
+	padding : 0px 0px 0px 0px;	
+}
+
+TD.app-form-regular
+{
+	font : normal normal normal 15px "Calibri","Arial",sans-serif;
+	padding : 5px 0px 5px 0px;
+	vertical-align: middle;
+}
+
+TD.app-form-line
+{
+	font : normal normal normal 15px "Calibri","Arial",sans-serif;
+	padding : 5px 0px 5px 0px;
+	vertical-align: middle;
+	border-bottom : 1px solid rgb(90, 90, 90);
+}
+
+TD.app-form-regular-caption
+{
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+	padding : 5px 0px 5px 0px;
+}
+
+TD.app-form-sub-caption
+{
+	font : normal normal bold 17px "Calibri","Arial",sans-serif;
+	padding : 5px 0px 5px 0px;
+	color : black;
+	border-bottom : 1px solid rgb(90, 90, 90);
+}
+
+TD.app-form-options
+{
+	font : normal normal bold 18px "Calibri","Arial",sans-serif;
+	padding : 5px 0px 8px 0px;
+	border-bottom : 1px solid rgb(90, 90, 90);
+}
+
+TD.app-form-bold
+{
+	font : normal normal bold 18px "Calibri","Arial",sans-serif;
+	padding : 5px 0px 8px 0px;
+}
+
+DIV.app-form-ex
+{
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 10px 0px 0px 0px;
+}
+
+P.app-form-ex-caption
+{
+	font : normal normal bold 20px "Calibri","Arial",sans-serif;
+	margin : 0px 0px 10px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+FORM.app-form-ex
+{
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+}
+
+TABLE.app-form-ex
+{
+	table-layout : auto;
+	width : auto;
+	font : normal normal normal 20px "Calibri","Arial",sans-serif;
+	border-collapse : collapse;
+	margin : 0px 10px 0px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+TD.app-form-ex-caption
+{
+	font : normal normal bold 16px "Calibri","Arial",sans-serif;
+	padding : 5px 15px 5px 0px;
+	vertical-align: middle;
+	border-bottom : 0px solid rgb(90, 90, 90);
+}
+
+TD.app-form-ex-regular
+{
+	font : normal normal normal 15px "Calibri","Arial",sans-serif;
+	padding : 5px 10px 5px 0px;
+	vertical-align: middle;
+	border-bottom : 0px solid rgb(90, 90, 90);
+}
+
+INPUT[type="submit"].app-form-regular
+{
+	text-align : center;
+	font : normal normal normal 15px "Calibri","Arial",sans-serif;
+	width : auto;
+}
+
+INPUT[type="submit"].app-form-options
+{
+	text-align : center;
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+	width : auto;
+}
+
+INPUT[type="submit"].app-form-bold
+{
+	text-align : center;
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+	width : auto;
+}
+
+INPUT[type="reset"].app-form-bold
+{
+	text-align : center;
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+	width : auto;
+}
+
+INPUT[type="reset"].app-form-regular
+{
+	text-align : center;
+	width : auto;
+}
+
+TD.app-form-line
+{
+	height : 15px;
+}
+
+DIV.app-section
+{
+	width : auto;
+	padding : 10px 0px 0px 0px;
+	margin : 10px 0px 0px 0px;
+}
+
+DIV.app-section P.caption
+{
+	margin : 0px 0px 10px 20px;
+	padding : 0px 0px 0px 0px;
+	font : normal normal bold 18px "Calibri","Arial",sans-serif;
+	color : black;
+}
+
+DIV.app-link-app
+{
+	width : 350px;
+	margin : 6px 0px 6px 20px;
+	padding : 0px 0px 0px 0px;
+}
+ 
+DIV.app-link-app P
+{
+	padding : 3px 0px 3px 5px;
+	margin : 0px 0px 0px 0px;
+	width : auto;
+	color : RGB(160, 0, 80);
+	font : normal normal normal 18px "Calibri","Arial",sans-serif;
+	cursor : pointer;
+	background-color : RGB(222, 222, 222);
+	text-decoration : none;
+}
+
+DIV.app-link-app P:hover
+{
+	font : normal normal normal 18px "Calibri","Arial",sans-serif;
+	background-color : RGB(200, 200, 200);
+}
+
+DIV.app-table-header
+{
+	width : auto;
+	max-width : 1000px;
+	padding : 0px 0px 0px 0px;
+	margin : 10px 20px 5px 20px;
+}
+
+TABLE.app-table-header
+{
+	width : auto;
+	table-layout : fixed;
+	margin : 0px 0px 0px 0px;
+	border-collapse : collapse;
+}
+
+TD.app-table-rowcount
+{
+	padding : 3px 7px 3px 7px;
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+	text-align : center;
+	color : black;
+	border-right : 5px solid RGB(232, 232, 232);
+	background-color : RGB(200, 200, 200);
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+
+TD.app-table-page
+{
+	padding : 3px 7px 3px 7px;
+	font : normal normal normal 15px "Calibri","Arial",sans-serif;
+	text-align : center;
+	color : black;
+	
+	border-right :5px solid RGB(232, 232, 232);
+	border-left  :5px solid RGB(232, 232, 232);
+
+	background-color : RGB(0, 200, 250);
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	cursor : pointer;
+}
+
+TD.app-table-page:hover
+{
+	background-color : RGB(220,220,220);
+}
+
+TD.app-table-selpage
+{
+	padding : 3px 7px 3px 7px;
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+	text-align : center;
+	color : black;
+	
+	border-right :5px solid RGB(232, 232, 232);
+	border-left  :5px solid RGB(232, 232, 232);
+	
+	background-color : RGB(0, 250, 250);
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	cursor : default;
+}
+
+TD.app-table-empty
+{
+	border-right :5px solid RGB(232, 232, 232);
+	border-left  :5px solid RGB(232, 232, 232);
+}
+
+DIV.app-table
+{
+	width : auto;
+	padding : 0px 0px 0px 0px;
+	margin : 0px 20px 0px 20px;
+	overflow : auto;
+	background-color : RGB(225, 225, 225);
+	border : 1px solid RGB(0, 0, 0);
+}
+
+TABLE.app-table
+{
+	width : 100%;
+	table-layout : fixed;
+	margin : 0px 0px 0px 0px;
+	border-collapse : collapse;
+	background-color : RGB(200, 235, 200);
+}
+
+TABLE.app-table TH
+{
+	padding : 3px 3px 3px 3px;
+	font : normal normal bold 14px "Calibri","Arial",sans-serif;
+	background-color : RGB(0, 220, 250);
+	text-align : left;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : pre;
+	cursor : pointer;
+	text-align : center;
+	border-bottom : 1px solid RGB(0, 0, 0);
+}
+
+TABLE.app-table TH:hover
+{
+	background-color : RGB(230,230,230);
+}
+
+TABLE.app-table TH.app-table-ordercol
+{
+	background-color : RGB(0, 250, 250);
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+}
+
+TABLE.app-table TD
+{
+	text-align : left;
+	font : normal normal normal 13px "Calibri","Arial",sans-serif;
+	padding : 5px 5px 5px 5px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : pre;
+	text-align : center;
+}
+
+TABLE.app-table TD.app-cell-link
+{
+}
+
+TABLE.app-table TD.app-cell-link:hover
+{
+	background-color : RGB(180,190,200);
+}
+
+TABLE.app-table TD.app-cell-red
+{
+	color : RGB(237,28,36);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-red
+{
+	color : RGB(237,28,36);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-red:hover
+{
+	background-color : RGB(180,190,200);
+}
+
+TABLE.app-table TD.app-cell-yellow
+{
+	color : RGB(255,201,14);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-yellow
+{
+	color : RGB(255,201,14);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-yellow:hover
+{
+	background-color : RGB(180,190,200);
+}
+
+TABLE.app-table TD.app-cell-orange
+{
+	color : RGB(255,106,6);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-orange
+{
+	color : RGB(255,106,6);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-orange:hover
+{
+	background-color : RGB(180,190,200);
+}
+
+TABLE.app-table TD.app-cell-green
+{
+	color : RGB(34,177,76);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-green
+{
+	color : RGB(34,177,76);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-green:hover
+{
+	background-color : RGB(180,190,200);
+}
+
+TABLE.app-table TD.app-cell-blue
+{
+	color : RGB(63,72,204);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-blue
+{
+	color : RGB(63,72,204);
+  font-weight : bold;
+}
+
+TABLE.app-table TD.app-cell-link-blue:hover
+{
+	background-color : RGB(180,190,200);
+}
+
+TABLE.app-table TR.header
+{
+	background-color : RGB(200, 235, 200);
+	border-bottom : 1px solid RGB(0, 0, 0);
+}
+
+TABLE.app-table TR.app-row-link-1
+{
+	cursor : pointer;
+	background-color : RGB(240, 240, 240);
+}
+
+TABLE.app-table TR.app-row-link-1:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-table TR.app-row-link-2
+{
+	cursor : pointer;
+	background-color : RGB(232, 232, 232);
+}
+
+TABLE.app-table TR.app-row-link-2:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-table TR.app-row-link-red
+{
+	cursor : pointer;
+	background-color : RGB(255,170,170);
+}
+
+TABLE.app-table TR.app-row-link-red:hover
+{
+	cursor : pointer;
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-table TR.app-row-link-yellow
+{
+	cursor : pointer;
+	background-color : RGB(250,250,180);
+}
+
+TABLE.app-table TR.app-row-link-yellow:hover
+{
+	cursor : pointer;
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-table TR.app-row-link-orange
+{
+	cursor : pointer;
+	background-color : RGB(255,200,150);
+}
+
+TABLE.app-table TR.app-row-link-orange:hover
+{
+	cursor : pointer;
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-table TR.app-row-link-green
+{
+	cursor : pointer;
+	background-color : RGB(100,200,100);
+}
+
+TABLE.app-table TR.app-row-link-green:hover
+{
+	cursor : pointer;
+	background-color : RGB(200,200,200);
+}
+
+DIV.app-tablesimple
+{
+	width : auto;
+	padding : 0px 0px 0px 0px;
+	margin : 20px 20px 20px 20px;
+}
+
+TABLE.app-tablesimple
+{
+	width : auto;
+	table-layout : fixed;
+	margin : 0px 0px 0px 0px;
+	border-collapse : collapse;
+	border : 1px solid RGB(0, 0, 0);
+	background-color : RGB(250, 250, 250);
+}
+
+TABLE.app-tablesimple TH
+{
+	padding : 3px 3px 3px 3px;
+	font : normal normal bold 14px "Calibri","Arial",sans-serif;
+	background-color : RGB(170, 240, 240);
+	text-align : left;
+	border-bottom:2px solid RGB(0,0,0);
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : pre;
+	text-align : center;
+	border-right : 1px solid rgb(0, 0, 0);
+}
+
+TABLE.app-tablesimple TD
+{
+	text-align : left;
+	font : normal normal normal 13px "Calibri","Arial",sans-serif;
+	padding : 5px 5px 5px 5px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : pre;
+}
+
+TABLE.app-tablesimple TR.app-row-link-1
+{
+	cursor : pointer;
+	background-color : RGB(240, 240, 240);
+}
+
+TABLE.app-tablesimple TR.app-row-link-1:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-tablesimple TR.app-row-link-2
+{
+	cursor : pointer;
+	background-color : RGB(232, 232, 232);
+}
+
+TABLE.app-tablesimple TR.app-row-link-2:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-tablesimple TD.red
+{
+	background-color : RGB(255,170,170);
+}
+
+TABLE.app-tablesimple TD.red:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-tablesimple TD.yellow
+{
+	background-color : RGB(250,250,180);
+}
+
+TABLE.app-tablesimple TD.yellow:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-tablesimple TD.orange
+{
+	background-color : RGB(250,200,150);
+}
+
+TABLE.app-tablesimple TD.orange:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+TABLE.app-tablesimple TD.green
+{
+	background-color : RGB(100,200,100);
+}
+
+TABLE.app-tablesimple TD.green:hover
+{
+	background-color : RGB(200,200,200);
+}
+
+DIV.app-infotable
+{
+	width : 100%;
+	padding : 0px 0px 0px 0px;
+	margin : 25px 0px 0px 0px;
+}
+
+P.app-infotable-caption
+{
+	font : normal normal bold 20px "Calibri","Arial",sans-serif;
+	margin : 0px 0px 10px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+TABLE.app-infotable
+{
+	table-layout : auto;
+	width : auto;
+	font : normal normal normal 20px "Calibri","Arial",sans-serif;
+	border-collapse : collapse;
+	margin : 0px 20px 0px 20px;
+	padding : 0px 0px 0px 0px;	
+}
+
+TD.app-infotable-regular
+{
+	font : normal normal normal 15px "Calibri","Times New Roman","serif";
+	padding : 3px 0px 3px 0px;
+	border-bottom : 1px solid RGB(120,120,120);
+}
+
+TD.app-infotable-regular-caption
+{
+	font : normal normal bold 15px "Calibri","Arial",sans-serif;
+	padding : 3px 0px 3px 0px;
+	border-bottom : 1px solid RGB(120,120,120);
+}
+
+SPAN.app-form-regular
+{
+	font : normal normal normal 15px "Calibri","Arial",sans-serif;
+	vertical-align: middle;
+}
+
+SPAN.app-form-big
+{
+	font : normal normal bold 18px "Calibri","Arial",sans-serif;
+	vertical-align: middle;
+}
+
+IMG.app-barcode
+{
+	margin: 10px 0px 0px 20px;
+	border: 1px solid RGB(100,100,100);
+}
+
+DIV.app-barcodegroup
+{
+	width : auto;
+	margin: 0px 0px 0px 0px;
+	padding : 0px 0px 0px 20px;
+}
+
+IMG.app-barcode-group
+{
+	margin: 10px 10px 0px 0px;
+	border: 1px solid RGB(100,100,100);
+}
+
+BODY.app-barcode-bod
+{
+	background-color : RGB(255, 255, 255);
+	margin : 0px;
+	padding : 0px;
+}
+
+IMG.app-barcode-img
+{
+	margin: 0px 0px 0px 0px;
+	border: 1px solid RGB(100,100,100);
+}
+

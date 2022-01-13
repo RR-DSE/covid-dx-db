@@ -1,0 +1,12 @@
+source,result
+".*não detetado.*","negative"
+".*não detectado.*","negative"
+".*não detectável.*","negative"
+".*não detetável.*","negative"
+".*negativo.*","negative"
+"^detetado.*","positive"
+"^detectado.*","positive"
+".*positivo.*","positive"
+".*erro.*","error"
+".*indeterminado.*","error"
+".*inconclusivo.*","inconclusive"

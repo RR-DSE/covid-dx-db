@@ -1,0 +1,30 @@
+source,field,type
+"NT","accession",1
+"NC","sample",1
+"Nome","name",2
+"Data Nasc","birthday",5
+"Sexo","gender",1
+"Processo","record",1
+"Entidade","state_id_1_type",1
+"NºBenef.","state_id_1",1
+"Serviço","department",1
+"Cod.Serviço","department_code",1
+"Análises","test_code",1
+"Data Colheita","sample_date",5
+"24116 SARS-CoV-2","result_rtpcr",1
+"24154 SARS-CoV-2","result_agicg",1
+"Data / Hora Resultado","result_datetime",7
+"Médico","prescriber",2
+"Modulo","episode",1
+"Morada","address_1",1
+"Código Postal","address_2",1
+"Email pessoal","email_patient",1
+"Email clínico","email_clinician",1
+"Email institucional","email_manager",1
+"Email de destino","email_unknown",1
+"Nome da instituição","group",1
+"Motivo da prescrição (rastreio ou surto)","context_class",1
+"Identificador da pessoa no contexto escolar","group_patient_class_1",1
+"Categoria do utente","group_patient_class_2",1
+"Departamento do utente","group_department",1
+"Localização do utente","group_location",1

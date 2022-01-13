@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--config.xml (utf-8)-->
+<!--Edited by: RR-DSE-->
+<!--Timestamp: 22-01-13 16:47:47-->
+
+<config>
+  <host>PLACEHOLDER</host>
+  <user>PLACEHOLDER</user>
+  <password>PLACEHOLDER</password>
+  <database>coviddxdb</database>
+  <smtp_server>PLACEHOLDER</smtp_server> 
+  <smtp_port>587</smtp_port> 
+  <smtp_sender>PLACEHOLDER</smtp_sender> 
+  <smtp_password>PLACEHOLDER</smtp_password> 
+  <transmission_session_timeout>1800</transmission_session_timeout>
+  <use_acrobat_reader>1</use_acrobat_reader>
+  <acrobat_reader_path>C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader</acrobat_reader_path>
+  <acrobat_reader_command>acrord32</acrobat_reader_command>
+  <email_results_body>{}\n\nSegue em anexo boletim, em PDF, com resultados de análises clínicas do(a) utente: {}.\n\nCom os melhores cumprimentos,\n\n{}.\n\n\n\nPor favor, não responda a este email.\n\nPlease do not reply to this email.\n\nAVISO DE CONFIDENCIALIDADE: Esta mensagem, assim como os ficheiros eventualmente anexos, contêm informação confidencial, sendo o seu sigilo protegido por lei. Se não for o destinatário ou pessoa autorizada a receber esta mensagem, não pode usar, copiar ou divulgar as informações nela contidas ou tomar qualquer ação baseada nas mesmas. Se for este o caso, proceda imediatamente à sua destruição, notificando o remetente. Agradecemos a sua cooperação.\n\nLIMITAÇÃO DE RESPONSABILIDADE: A segurança da transmissão desta informação por via electrónica não pode ser garantida pelo remetente, o qual, em, consequência, não se responsabiliza por qualquer facto susceptível de afectar a sua integridade.\n\nCONFIDENTIALITY NOTICE: This message, as well as any files that may be attached, contain confidential information, and its confidentiality is protected by law. If you are not the recipient or person authorized to receive this message, you may not use, copy or disclose the information contained therein or take any action based on it. If this is the case, proceed to its destruction immediately, notifying the sender. We appreciate your cooperation.\n\nDISCLAIMER: The sender of this message can not ensure the security of its electronical transmission and, consequently does not accept liability for any fact which may interfere with the integrity of its content.\n\n</email_results_body>
+  <social_institution_classes>
+    <class>nursing_home</class>
+    <class>school</class>
+    <class>children_home</class>
+    <class>healthcare_unit</class>
+  </social_institution_classes>
+  <status_list>
+    <status id="inpatient">Internado</status>
+    <status id="discharged">Alta</status>
+    <status id="deceased">Falecido</status>
+    <status id="outpatient">Ambulatório</status>
+    <status id="outpatientquarant">Quarentena</status>
+    <status id="outpatientresolved">Tratado</status>
+    <status id="unknown"></status>
+  </status_list>
+  <methods>
+    <method id="rtpcr">RT-qPCR</method>
+    <method id="agicg">TRAG</method>
+  </methods>
+  <results>
+    <result id="positive">Detetado</result>
+    <result id="negative">Não detetado</result>
+    <result id="inconclusive">Inconclusivo</result>
+    <result id="error">Indeterminado</result>
+  </results>
+  <stock_references>
+    <stock id="auto_extraction" reference="" acquired="true" method="rtpcr" factor="1.15" caption="Kits de extração automática">Unidades de extração automática de RNA</stock>
+    <stock id="pcr_reactions" reference="" acquired="true" method="rtpcr" factor="0.8" caption="Testes de deteção por RT-qPCR">Testes de deteção de RNA por RT-qPCR</stock>
+    <stock id="pcr_closed" reference="" acquired="true" caption="Testes de RT-qPCR em cartucho">Testes de diagnóstico por RT-qPCR automatizado em cartucho</stock>
+    <stock id="pcr_panel" reference="" acquired="true" caption="Testes multiplex de RT-qPCR em cartucho">Testes multiplex de diagnóstico por RT-qPCR automatizado em cartucho para vírus respiratórios</stock>
+    <stock id="agicg_kits" reference="" acquired="true" method="agicg" caption="Kits de TRAGs">Testes rápidos de antigénio imunocromatográficos</stock>
+    <stock id="swab" acquired="true" method="rtpcr" factor="1.0" caption="Kits de colheita">Kits de colheita por zaragatoa</stock>
+    <stock id="capacity" caption="Capacitação em testes/dia">Capacitação em testes/dia</stock>
+  </stock_references>
+  <group_list_page_len>10</group_list_page_len>
+  <excluded_comments_search>
+    <search>english</search>
+  </excluded_comments_search>
+  <report_1 caption="Resultados para SARS-CoV-2 em PDF">
+    <title>Resultados para SARS-CoV-2</title>
+    <datetime_filename>%Y-%m-%d %H%M</datetime_filename>
+    <datetime_report>%d/%m/%Y %H:%M</datetime_report>
+    <datetime_report_curr>%d/%m/%Y %H:%M</datetime_report_curr>
+    <datetime_filename_curr>%Y-%m-%d %H%M</datetime_filename_curr>
+    <datetime_filename_email_curr>%Y_%m_%d_%H%M</datetime_filename_email_curr>
+    <filename_format>{2} - SARS-CoV-2, {3}, {4} a {5}.pdf</filename_format>
+    <filename_email_format>SCOV2_{0}.pdf</filename_email_format>
+    <datetime_email>%d/%m/%Y %H:%M</datetime_email>
+    <group title="geral" caption="Geral">
+      <to></to>
+      <cc></cc>
+      <subject>Resultados para SARS-CoV-2</subject>
+      <body>{0}.\n\nSegue em anexo um relatório de resultados para o SARS-CoV-2 de {1} a {2}.\n\nCom os melhores cumprimentos,\n\n{3}.</body>
+      <filter_department>*</filter_department>
+    </group>
+  </report_1>
+  <report_2 caption="Resultados para SARS-CoV-2 em XLS">
+    <datetime_filename_curr>%Y-%m-%d %H%M</datetime_filename_curr>
+    <datetime_filename>%Y-%m-%d %H%M</datetime_filename>
+    <datetime_filename_email_curr>%Y_%m_%d_%H%M</datetime_filename_email_curr>
+    <datetime_filename_email>%Y_%m_%d_%H%M</datetime_filename_email>
+    <filename_format>{2} - SARS-CoV-2, {3} a {4}.xls</filename_format>
+    <filename_email_format>SCOV2_{0}.xls</filename_email_format>
+    <datetime_email>%d/%m/%Y %H:%M</datetime_email>
+    <group title="geral" caption="Geral">
+      <to></to>
+      <cc></cc>
+      <subject>SARS-CoV-2, Resultados, Excel</subject>
+      <body>{0}.\n\nSegue em anexo um ficheiro Excel com os últimos resultados para o SARS-CoV-2, de {1} a {2}.\n\nCom os melhores cumprimentos, \n\n{3}.</body>
+      <filter_department>*</filter_department>
+    </group>
+  </report_2>
+  <report_3 caption="Utentes COVID-19 em PDF">
+    <title>Relatório de utentes com COVID-19</title>
+    <datetime_filename>%Y-%m-%d %H%M</datetime_filename>
+    <datetime_report>%d/%m/%Y %H:%M</datetime_report>
+    <datetime_report_curr>%d/%m/%Y %H:%M</datetime_report_curr>
+    <datetime_filename_curr>%Y-%m-%d %H%M</datetime_filename_curr>
+    <datetime_filename_email_curr>%Y_%m_%d_%H_%M</datetime_filename_email_curr>
+    <filename_format>{2} - Utentes COVID-19, {3} a {4}.pdf</filename_format>
+    <filename_email_format>COVID_19_{0}.pdf</filename_email_format>
+    <group title="geral" caption="Geral">
+      <to></to>
+      <cc></cc>
+      <subject></subject>
+      <body>{0}.\n\nSegue em anexo um relatório atualizado de utentes com SARS-CoV-2 detetado no nosso laboratório. \n\nCom os melhores cumprimentos,\n\n{1}.</body>
+      <filter_department>*</filter_department>
+    </group>
+  </report_3>
+  <report_4 caption="Resultados mais recentes por grupos">
+    <datetime_filename>%Y-%m-%d %H%M</datetime_filename>
+    <datetime_report>%d/%m/%Y %H:%M</datetime_report>
+    <datetime_report_curr>%d/%m/%Y %H:%M</datetime_report_curr>
+    <datetime_filename_curr>%Y-%m-%d %H%M</datetime_filename_curr>
+    <datetime_filename_email_curr>%Y_%m_%d_%H%M</datetime_filename_email_curr>
+    <filename_format>{2} - {3}, SARS-CoV-2, {4} a {5}.pdf</filename_format>
+    <filename_email_format>Grupo_{1}_SCOV2_{0}.pdf</filename_email_format>
+    <datetime_email>%d/%m/%Y %H:%M</datetime_email>
+    <group title="geral" caption="Geral">
+      <to></to>
+      <cc></cc>
+      <subject>Resultados para SARS-CoV-2 de {0}</subject>
+      <body>{0}.\n\nSeguem em anexo relatórios de resultados para o SARS-CoV-2 de grupos ou instituições, de {1} a {2}.\n\nOs grupos são os seguintes:{3}\n\nCom os melhores cumprimentos,\n\n{4}.</body>
+      <filter_group>*</filter_group>
+    </group>
+  </report_4>
+  <stock_email_date_format>%d/%m/%Y</stock_email_date_format>
+  <report_5 caption="Reporte de stock diário por email">
+    <to></to>
+    <cc></cc>
+  </report_5>
+  <report_6 caption="Reporte de stock semanal para #INSTITUION# por email">
+    <recipient></recipient>
+    <to></to>
+    <cc></cc>
+  </report_6>
+  <report_7 caption="Resumo de rastreios em instituições sociais">
+    <datetime_file>%Y-%m-%d</datetime_file>
+    <datetime>%Y-%m-%d</datetime>
+    <filename_format>{2} - SARS-CoV-2, Instituições sociais, {3} a {4}.{5}</filename_format>
+    <datetime_file_email>%Y_%m_%d</datetime_file_email>
+    <datetime_email>%Y_%m_%d</datetime_email>
+    <filename_format_email>{0}_SCOV2_Inst_Soc_{1}_{2}.{3}</filename_format_email>
+    <count_cutoff>7</count_cutoff>
+    <group title="geral" caption="Geral">
+      <to></to>
+      <cc></cc>
+      <subject>Resumo de testes de rastreio para SARS-CoV-2 na semana de {0} a {1}</subject>
+      <body>{0}.\n\nEnviamos contagens relativas a testes de rastreio de SARS-CoV-2 realizados em instituições sociais na semana de {1} a {2}, segundo os dados de que dispomos.\n\nCom os melhores cumprimentos,\n\n{3}.</body>
+    </group>
+  </report_7>
+  <summary_1 caption="D">
+    <title>Dados para formulário de reporte para #INSTITUTION# de contagens de testes para a COVID-19</title>
+    <date_report>%d/%m/%Y</date_report>
+    <datetime_report>%d/%m/%Y %H:%M</datetime_report>
+    <datetime_report_curr>%d/%m/%Y %H:%M</datetime_report_curr>
+    <datetime_filename_curr>%Y-%m-%d %H%M</datetime_filename_curr>
+    <filename_format>{2} - Dados para formulário de reporte de #INSTITUTION#.pdf</filename_format>
+    <department>#DEPARTMENT#</department>
+    <email>example@email.com</email>
+  </summary_1>
+</config>

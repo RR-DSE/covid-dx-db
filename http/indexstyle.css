@@ -1,0 +1,97 @@
+/*
+- indexstyle.css (utf-8)
+- 
+- Edited by: RR-DSE
+- Timestamp: 22-01-12 20:03:09
+*/
+
+* {
+	text-decoration : none;
+	color : black;
+	vertical-align : center;
+	text-align : left;
+}
+
+BODY {
+	background-color : rgb(232, 232, 232);
+	padding : 0px 0px 0px 0px;
+	margin : 0px 0px 0px 0px;
+	min-width : 800px;
+}
+
+DIV.header {
+	background-color : rgb(255, 255, 255);
+	margin : 0px 0px 0px 0px;
+}
+
+P.title-1 {
+	margin : 0px 0px 0px 0px;
+	padding : 20px 20px 0px 20px;
+	font : normal normal normal 40px "Calibri","Arial",sans-serif;
+	color : rgb(50, 200, 50);
+}
+
+P.title-2 {
+	margin : 0px 0px 0px 0px;
+	padding : 0px 20px 20px 20px;
+	font : normal normal normal 30px "Calibri","Arial",sans-serif;
+	color : rgb(100, 100, 50);
+}
+
+P.welcome {
+	margin : 0px 0px 0px 0px;
+	padding : 20px 20px 10px 20px;
+	font : normal normal normal 25px "Calibri","Arial",sans-serif;
+	color : rgb(0, 0, 100);
+}
+
+P.notice {
+	margin : 0px 0px 0px 0px;
+	padding : 0px 50px 20px 20px;
+	font : normal normal normal 20px "Calibri","Arial",sans-serif;
+	color : black;
+}
+
+DIV.link {
+	width : 700px;
+	margin : 6px 0px 6px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+DIV.link P{
+	padding : 3px 0px 3px 5px;
+	margin : 0px 0px 0px 0px;
+	width : auto;
+	color : RGB(160, 0, 80);
+	font : normal normal normal 25px "Calibri","Arial",sans-serif;
+	cursor : pointer;
+	background-color : RGB(222, 222, 222);
+	text-decoration : none;
+}
+
+DIV.link P:hover{
+	font : normal normal normal 25px "Calibri","Arial",sans-serif;
+	background-color : RGB(200, 200, 200);
+}
+
+DIV.link_doc {
+	width : 700px;
+	margin : 6px 0px 6px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+DIV.link_doc P{
+	padding : 3px 0px 3px 5px;
+	margin : 0px 0px 0px 0px;
+	width : auto;
+	color : RGB(160, 0, 80);
+	font : normal normal normal 18px "Calibri","Arial",sans-serif;
+	cursor : pointer;
+	background-color : RGB(222, 222, 222);
+	text-decoration : none;
+}
+
+DIV.link_doc P:hover{
+	font : normal normal normal 18px "Calibri","Arial",sans-serif;
+	background-color : RGB(200, 200, 200);
+}

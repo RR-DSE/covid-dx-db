@@ -1,0 +1,17 @@
+param,value
+"date","09/12/2021"
+"auto_extraction_stock",0
+"auto_extraction_requested",0
+"pcr_reactions_stock",0
+"pcr_reactions_requested",0
+"pcr_closed_stock",0
+"pcr_closed_requested",0
+"pcr_panel_stock",0
+"pcr_panel_requested",0
+"agicg_kits_stock",0
+"agicg_kits_requested",0
+"swab_stock",0
+"swab_requested",0
+"capacity",0
+"email_1",0
+"email_2",0

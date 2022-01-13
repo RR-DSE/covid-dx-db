@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<!--coviddxdb_schema_compact.xml (utf-8)-->
+<!--Edited by: RR-DSE-->
+<!--Timestamp: 22-01-13 15:32:59-->
+
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="coviddxdb">
+	<table_structure name="access_control">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="token" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="sample_id" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="password" Type="char(16)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="access_control" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="25215" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="access_control" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="25215" Avg_row_length="187" Data_length="4734976" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="48637" Create_time="2021-08-06 15:24:21" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="apps">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="code" Type="char(32)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="title" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="location" Type="char(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="admin" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="apps" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="18" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="apps" Non_unique="0" Key_name="code" Seq_in_index="1" Column_name="code" Collation="A" Cardinality="18" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="apps" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="18" Avg_row_length="910" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="0" Auto_increment="20" Create_time="2020-11-03 23:49:34" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="audit_patients">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="name" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="birthday" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="gender" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="record" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_id_1" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="patient_status" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="patient_status_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="department" Type="bigint(20) unsigned" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="admittance_date" Type="date" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="floor" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="room" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="bed" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="hcworker" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sinave" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sinave_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status_notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<options Name="audit_patients" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="12763" Avg_row_length="370" Data_length="4734976" Max_data_length="0" Index_length="0" Data_free="4194304" Create_time="2020-11-03 23:49:34" Update_time="2022-01-11 01:15:49" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="audit_tests">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="name" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="birthday" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="gender" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="record" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="episode" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_id_1" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="patient_id" Type="bigint(20) unsigned" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="department" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="department_code" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="department_id" Type="bigint(20) unsigned" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="test_code" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="method_code" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sample_id" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="sample_id_2" Type="int(10) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="accession" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sample_date" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="result_code" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="result_comments" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="result_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="tec_validator" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="validation_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="bio_validator" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_report_1" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_report_1_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="address_1" Type="varchar(256)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="address_2" Type="varchar(64)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="email" Type="char(64)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="phone" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="prescriber" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status_notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<options Name="audit_tests" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="59995" Avg_row_length="918" Data_length="55132160" Max_data_length="0" Index_length="0" Data_free="6291456" Create_time="2021-08-28 11:47:41" Update_time="2022-01-11 01:15:49" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="audit_transmissions">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="sample_id" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="class" Type="enum('email','phone','print','internal','unknown')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="varchar(256)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="recipient_class" Type="enum('patient','clinician','manager','caregiver','family','unknown')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="recipient_description" Type="varchar(256)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status" Type="enum('ok','pending','error','canceled')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<options Name="audit_transmissions" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="52069" Avg_row_length="151" Data_length="7880704" Max_data_length="0" Index_length="0" Data_free="4194304" Create_time="2021-08-06 15:24:28" Update_time="2022-01-11 01:16:05" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="departments">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="title" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="phone" Type="char(16)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="contacts" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status_notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="departments" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="32" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="departments" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="32" Avg_row_length="512" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="34" Create_time="2020-11-03 23:49:34" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="emails">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="name" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="birthday" Type="date" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_id" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="email" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="class" Type="enum('patient','clinician','manager','caregiver','family')" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="date" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="emails" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="3741" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="emails" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="3741" Avg_row_length="705" Data_length="2637824" Max_data_length="0" Index_length="0" Data_free="2097152" Auto_increment="3830" Create_time="2021-08-06 15:24:21" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="groups">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="name" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="birthday" Type="date" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sample" Type="char(32)" Null="YES" Key="UNI" Extra="" Comment="" />
+		<field Field="state_id" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="group" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="class" Type="enum('patient','collaborator','internal','contact')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="department" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="category" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="location" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="social_institution" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="institution_class" Type="enum('nursing_home','school','children_home','healthcare_unit','other')" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="date" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="source" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(1) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="groups" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="11330" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="groups" Non_unique="0" Key_name="sample" Seq_in_index="1" Column_name="sample" Collation="A" Cardinality="3414" Null="YES" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="groups" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="11332" Avg_row_length="602" Data_length="6832128" Max_data_length="0" Index_length="442368" Data_free="4194304" Auto_increment="16291" Create_time="2021-08-06 15:24:21" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="patients">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="name" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="birthday" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="gender" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="record" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_id_1" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="patient_status" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="patient_status_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="department" Type="bigint(20) unsigned" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="admittance_date" Type="date" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="floor" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="room" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="bed" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="hcworker" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sinave" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sinave_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status_notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="patients" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="21587" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="patients" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="21587" Avg_row_length="413" Data_length="8929280" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="45238" Create_time="2020-11-03 23:49:34" Update_time="2022-01-11 01:15:49" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="profiles">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="title" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status_notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="profiles" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="5" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="profiles" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="5" Avg_row_length="3276" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="6" Create_time="2020-11-03 23:49:34" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="profilesetup">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="profile" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="app" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="profilesetup" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="35" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="profilesetup" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="35" Avg_row_length="468" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="172" Create_time="2020-11-03 23:49:34" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="sessions">
+		<field Field="user" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="session_id" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="host" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status" Type="enum('offline','online')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="lastact" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="sessions" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="user" Collation="A" Cardinality="12" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="sessions" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="12" Avg_row_length="1365" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Create_time="2020-11-03 23:49:34" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="tests">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="name" Type="char(128)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="birthday" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="gender" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="record" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="episode" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_id_1" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="patient_id" Type="bigint(20) unsigned" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="department" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="department_code" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="department_id" Type="bigint(20) unsigned" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="test_code" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="method_code" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sample_id" Type="char(32)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="sample_id_2" Type="int(10) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="accession" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="sample_date" Type="date" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="result_code" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="result_comments" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="result_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="tec_validator" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="validation_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="bio_validator" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_report_1" Type="tinyint(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="state_report_1_datetime" Type="datetime" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="address_1" Type="varchar(256)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="address_2" Type="varchar(64)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="email" Type="char(64)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="phone" Type="char(32)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="prescriber" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status_notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="tests" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="56531" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="tests" Non_unique="1" Key_name="sample_id" Seq_in_index="1" Column_name="sample_id" Collation="A" Cardinality="56540" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="tests" Non_unique="1" Key_name="sample_id_2" Seq_in_index="1" Column_name="sample_id_2" Collation="A" Cardinality="56540" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="tests" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="56540" Avg_row_length="1068" Data_length="60391424" Max_data_length="0" Index_length="3686400" Data_free="4194304" Auto_increment="84547" Create_time="2021-08-28 12:21:33" Update_time="2022-01-11 01:15:49" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="transmissions">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="sample_id" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="class" Type="enum('email','phone','print','internal','unknown')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="description" Type="varchar(256)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="recipient_class" Type="enum('patient','clinician','manager','caregiver','family','unknown')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="recipient_description" Type="varchar(256)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status" Type="enum('ok','pending','error','canceled')" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="transmissions" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="28689" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="transmissions" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="28689" Avg_row_length="165" Data_length="4734976" Max_data_length="0" Index_length="0" Data_free="4194304" Auto_increment="45032" Create_time="2021-08-06 15:24:21" Update_time="2022-01-11 01:16:05" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+	<table_structure name="users">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="username" Type="char(32)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="password" Type="char(64)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="profile" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="name" Type="char(128)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="status" Type="tinyint(3) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="status_notes" Type="varchar(512)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="add_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="add_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_user" Type="bigint(20) unsigned" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="mod_datetime" Type="datetime" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="users" Non_unique="0" Key_name="id" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="23" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="users" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="23" Avg_row_length="712" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="24" Create_time="2020-11-03 23:49:34" Collation="utf8_general_ci" Create_options="" Comment="" />
+	</table_structure>
+</database>
+</mysqldump>
